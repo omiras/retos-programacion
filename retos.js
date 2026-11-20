@@ -6,11 +6,11 @@ const retos = {
   media: {
     funcion: "getAverage",
     pruebas: [
-      { entrada: [[2, 2, 4, 2]], esperado: 2 },
+      { entrada: [[2, 2, 4, 2]], esperado: 2.5 },
       { entrada: [[1, 2, 3, 4, 5]], esperado: 3 },
       { entrada: [[5]], esperado: 5 },
-      { entrada: [[12, 17, 4, 12, 2, 2, 16, 12, 2, 11, 16, 5, 20]], esperado: 10 },
-      { entrada: [[0, 1]], esperado: 0 }
+      { entrada: [[12, 17, 4, 12, 2, 2, 16, 12, 2, 11, 16, 5, 20]], esperado: 10.08 },
+      { entrada: [[0, 1]], esperado: 0.5 }
     ]
   },
   juego: {
@@ -53,12 +53,12 @@ if (typeof funcion !== "function") {
   let aciertos = 0;
   reto.pruebas.forEach((prueba, indice) => {
     const llamada = reto.funcion + "(" + prueba.entrada.map(formatear).join(", ") + ")";
-    const esperado = descripcionResultado + " " + formatear(prueba.esperado);
+    const esperado = descripcionResultado + " " + formatearResultado(prueba.esperado, true);
     try {
       const recibido = funcion(...JSON.parse(JSON.stringify(prueba.entrada)));
       const correcto = Object.is(recibido, prueba.esperado);
       if (correcto) aciertos++;
-      mostrar("Prueba " + (indice + 1) + " · " + llamada + ": " + esperado + ". Tu función devolvió " + formatear(recibido) + ". " + (correcto ? "Correcta." : "Revisa este caso."), correcto);
+      mostrar("Prueba " + (indice + 1) + " · " + llamada + ": " + esperado + ". Tu función devolvió " + formatearResultado(recibido, correcto) + ". " + (correcto ? "Correcta." : "Revisa este caso."), correcto);
     } catch (error) {
       mostrar("Prueba " + (indice + 1) + " · " + llamada + ": " + esperado + ". Error: " + error.message, false);
     }
@@ -77,4 +77,11 @@ function formatear(valor) {
   if (Array.isArray(valor)) return "[" + valor.map(formatear).join(", ") + "]";
   if (typeof valor === "string") return JSON.stringify(valor);
   return String(valor);
+}
+
+function formatearResultado(valor, mostrarDosDecimales) {
+  if (idReto === "media" && mostrarDosDecimales && typeof valor === "number") {
+    return valor.toFixed(2);
+  }
+  return formatear(valor);
 }

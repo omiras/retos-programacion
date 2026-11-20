@@ -19,8 +19,10 @@
     <section class="panel">
       <h2>Tu misión</h2>
       <p>Completa la función <code>getAverage(marks)</code>. Recibe un array con las notas numéricas del alumnado y debe
-        devolver la media del grupo como un número entero, redondeado siempre hacia abajo. Puedes contar con que el
-        array contiene al menos una nota.</p>
+        devolver la media del grupo como un número, redondeada a dos decimales. Puedes contar con que el array contiene
+        al menos una nota.</p>
+      <p>Las pruebas muestran siempre dos cifras decimales. En JavaScript, un número como <code>2.50</code> puede
+        mostrarse como <code>2.5</code> en la consola: ambos representan el mismo valor.</p>
       <p>La función debe devolver el valor; no basta con mostrarlo en la consola.</p>
     </section>
     <section class="panel">
@@ -44,11 +46,11 @@
     }
 
     // Llamadas de prueba: comprueba el resultado en la consola del navegador.
-    console.log(getAverage([2, 2, 4, 2])); // Se espera 2
-    console.log(getAverage([1, 2, 3, 4, 5])); // Se espera 3
-    console.log(getAverage([5])); // Se espera 5
-    console.log(getAverage([12, 17, 4, 12, 2, 2, 16, 12, 2, 11, 16, 5, 20])); // Se espera 10
-    console.log(getAverage([0, 1])); // Se espera 0
+    console.log(getAverage([2, 2, 4, 2])); // Se espera 2.50
+    console.log(getAverage([1, 2, 3, 4, 5])); // Se espera 3.00
+    console.log(getAverage([5])); // Se espera 5.00
+    console.log(getAverage([12, 17, 4, 12, 2, 2, 16, 12, 2, 11, 16, 5, 20])); // Se espera 10.08
+    console.log(getAverage([0, 1])); // Se espera 0.50
   </script>
 
   <!-- FIN DEL CÓDIGO DEL ALUMNADO -->
