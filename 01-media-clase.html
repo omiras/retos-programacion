@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>La media de la clase</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="retos.js" defer></script>
+</head>
+
+<body data-reto="media">
+  <main>
+    <header><a href="index.html">← Todos los retos</a>
+      <p class="eyebrow">Reto 01 · Arrays</p>
+      <h1>La media de la clase</h1>
+      <p class="intro">Laia necesita conocer la nota media de su clase para preparar el informe del trimestre.</p>
+    </header>
+    <section class="panel">
+      <h2>Tu misión</h2>
+      <p>Completa la función <code>getAverage(marks)</code>. Recibe un array con las notas numéricas del alumnado y debe
+        devolver la media del grupo como un número entero, redondeado siempre hacia abajo. Puedes contar con que el
+        array contiene al menos una nota.</p>
+      <p>La función debe devolver el valor; no basta con mostrarlo en la consola.</p>
+    </section>
+    <section class="panel">
+      <h2>Comprueba tu solución</h2>
+      <p>Abre este archivo HTML en un editor de texto, completa la función dentro de las etiquetas
+        <code>&lt;script&gt;</code> que encontrarás al final, guarda los cambios y recarga la página. Las pruebas se
+        ejecutan al cargarla.
+      </p>
+      <p id="resumen" aria-live="polite"></p>
+      <ul id="resultados" class="resultados" aria-live="polite"></ul>
+    </section>
+    <footer>Escribe el código en el archivo HTML y vuelve a cargar la página para comprobarlo.</footer>
+  </main>
+
+  <!-- CÓDIGO DEL ALUMNADO: escribe dentro de la función y conserva las llamadas de prueba. -->
+
+  <script>
+    function getAverage(marks) {
+      // Escribe tu código aquí.
+
+    }
+
+    // Llamadas de prueba: comprueba el resultado en la consola del navegador.
+    console.log(getAverage([2, 2, 4, 2])); // Se espera 2
+    console.log(getAverage([1, 2, 3, 4, 5])); // Se espera 3
+    console.log(getAverage([5])); // Se espera 5
+    console.log(getAverage([12, 17, 4, 12, 2, 2, 16, 12, 2, 11, 16, 5, 20])); // Se espera 10
+    console.log(getAverage([0, 1])); // Se espera 0
+  </script>
+
+  <!-- FIN DEL CÓDIGO DEL ALUMNADO -->
+
+</body>
+
+</html>
+
