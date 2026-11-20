@@ -1,29 +1,53 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Retiradas bajo revisión</title><link rel="stylesheet" href="estilos.css">
-  <script src="retos.js" defer></script></head>
-<body data-reto="retiradas"><main><header><a href="index.html">← Todos los retos</a><p class="eyebrow">Reto 03 · Arrays</p><h1>Retiradas bajo revisión</h1><p class="intro">Un banco revisa los movimientos de una cuenta durante un período para detectar si las retiradas acumuladas superan el límite permitido.</p></header>
-<section class="panel"><h2>Tu misión</h2><p>Completa la función <code>calcularRetiradas(movimientos)</code>. Recibe un array de importes en euros: los positivos son ingresos, los negativos son retiradas y el cero no representa ninguna retirada. Debe devolver cuánto dinero se ha retirado en total, expresado como número positivo. Los ingresos no reducen ese total.</p><p>Si no hay importes negativos, devuelve <code>0</code>. El banco comparará después ese total con su límite: si lo supera, podrá bloquear la siguiente operación. Tu función entrega el total necesario para tomar esa decisión.</p></section>
-<section class="panel"><h2>Comprueba tu solución</h2><p>Abre este archivo HTML en un editor de texto, completa la función dentro de las etiquetas <code>&lt;script&gt;</code> que encontrarás al final. Debajo verás las llamadas de prueba y sus resultados esperados. Guarda los cambios y recarga la página: los resultados aparecerán aquí y en la consola.</p><p id="resumen" aria-live="polite"></p><ul id="resultados" class="resultados" aria-live="polite"></ul></section><footer>Escribe el código en el archivo HTML y vuelve a cargar la página para comprobarlo.</footer></main>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Retiradas bajo revisión</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="retos.js" defer></script>
+</head>
+<body data-reto="retiradas">
+  <main>
+    <header>
+      <a href="index.html">← Todos los retos</a>
+      <p class="eyebrow">Reto 03 · Arrays</p>
+      <h1>Retiradas bajo revisión</h1>
+      <p class="intro">Un banco revisa los movimientos de una cuenta durante un período para detectar si las retiradas acumuladas superan el límite permitido.</p>
+    </header>
+    <section class="panel">
+      <h2>Tu misión</h2>
+      <p>Completa la función <code>calcularRetiradas(movimientos)</code>. Recibe un array de importes en euros: los positivos son ingresos, los negativos son retiradas y el cero no representa ninguna retirada. Debe devolver cuánto dinero se ha retirado en total, expresado como número positivo. Los ingresos no reducen ese total.</p>
+      <p>Si no hay importes negativos, devuelve <code>0</code>. El banco comparará después ese total con su límite: si lo supera, podrá bloquear la siguiente operación. Tu función entrega el total necesario para tomar esa decisión.</p>
+    </section>
+    <section class="panel">
+      <h2>Comprueba tu solución</h2>
+      <p>Abre este archivo HTML en un editor de texto, completa la función dentro de las etiquetas <code>&lt;script&gt;</code> que encontrarás al final. Debajo verás las llamadas de prueba y sus resultados esperados. Guarda los cambios y recarga la página: los resultados aparecerán aquí y en la consola.</p>
+      <p id="resumen" aria-live="polite"></p>
+      <ul id="resultados" class="resultados" aria-live="polite"></ul>
+    </section>
+
+    <footer>Escribe el código en el archivo HTML y vuelve a cargar la página para comprobarlo.</footer>
+  </main>
 
   <!-- CÓDIGO DEL ALUMNADO: escribe dentro de la función y conserva las llamadas de prueba. -->
 
   <script>
-function calcularRetiradas(movimientos) {
-  // Escribe tu código aquí.
-}
+    function calcularRetiradas(movimientos) {
+      // Escribe tu código aquí.
+    }
 
-// Llamadas de prueba: comprueba el resultado en la consola del navegador.
-console.log(calcularRetiradas([-20, 50, -10, 0])); // Se espera 30
-console.log(calcularRetiradas([15, 20, 0])); // Se espera 0
-console.log(calcularRetiradas([-5, -12, -3])); // Se espera 20
-console.log(calcularRetiradas([])); // Se espera 0
-console.log(calcularRetiradas([100, -80, 30, -20])); // Se espera 100
+    // Llamadas de prueba: comprueba el resultado en la consola del navegador.
+    console.log(calcularRetiradas([-20, 50, -10, 0])); // Se espera 30
+    console.log(calcularRetiradas([15, 20, 0])); // Se espera 0
+    console.log(calcularRetiradas([-5, -12, -3])); // Se espera 20
+    console.log(calcularRetiradas([])); // Se espera 0
+    console.log(calcularRetiradas([100, -80, 30, -20])); // Se espera 100
 </script>
 
   <!-- FIN DEL CÓDIGO DEL ALUMNADO -->
 
-</body></html>
+</body>
 
-
-
-
+</html>

@@ -1,33 +1,58 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Piedra, papel o tijera</title><link rel="stylesheet" href="estilos.css">
-  <script src="retos.js" defer></script></head>
-<body data-reto="juego"><main><header><a href="index.html">← Todos los retos</a><p class="eyebrow">Reto 02 · Condiciones</p><h1>Piedra, papel o tijera</h1><p class="intro">Dos personas han hecho su elección. Tu función anunciará el resultado de la ronda.</p></header>
-<section class="panel"><h2>Tu misión</h2><img class="ilustracion" src="piedra-papel-tijera.png" alt="Tres manos que representan piedra, papel y tijera"><p>Completa la función <code>rps(p1, p2)</code>. Cada parámetro contiene la elección de un jugador: <code>"rock"</code>, <code>"paper"</code> o <code>"scissors"</code>. La piedra vence a la tijera, la tijera vence al papel y el papel vence a la piedra. Si ambos eligen lo mismo, hay empate.</p><p>Devuelve exactamente <code>"Player 1 won!"</code>, <code>"Player 2 won!"</code> o <code>"Draw!"</code>, según corresponda. Conservamos estos textos del reto original para comprobar los resultados.</p></section>
-<section class="panel"><h2>Comprueba tu solución</h2><p>Abre este archivo HTML en un editor de texto, completa la función dentro de las etiquetas <code>&lt;script&gt;</code> que encontrarás al final. Debajo verás las llamadas de prueba y sus resultados esperados. Guarda los cambios y recarga la página: los resultados aparecerán aquí y en la consola.</p><p id="resumen" aria-live="polite"></p><ul id="resultados" class="resultados" aria-live="polite"></ul></section><footer>Escribe el código en el archivo HTML y vuelve a cargar la página para comprobarlo.</footer></main>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Piedra, papel o tijera</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="retos.js" defer></script>
+</head>
+<body data-reto="juego">
+  <main>
+    <header>
+      <a href="index.html">← Todos los retos</a>
+      <p class="eyebrow">Reto 02 · Condiciones</p>
+      <h1>Piedra, papel o tijera</h1>
+      <p class="intro">Dos personas han hecho su elección. Tu función anunciará el resultado de la ronda.</p>
+    </header>
+    <section class="panel">
+      <h2>Tu misión</h2>
+      <img class="ilustracion" src="piedra-papel-tijera.png" alt="Tres manos que representan piedra, papel y tijera">
+      <p>Completa la función <code>rps(p1, p2)</code>. Cada parámetro contiene la elección de un jugador: <code>"rock"</code>, <code>"paper"</code> o <code>"scissors"</code>. La piedra vence a la tijera, la tijera vence al papel y el papel vence a la piedra. Si ambos eligen lo mismo, hay empate.</p>
+      <p>Devuelve exactamente <code>"Player 1 won!"</code>, <code>"Player 2 won!"</code> o <code>"Draw!"</code>, según corresponda. Conservamos estos textos del reto original para comprobar los resultados.</p>
+    </section>
+    <section class="panel">
+      <h2>Comprueba tu solución</h2>
+      <p>Abre este archivo HTML en un editor de texto, completa la función dentro de las etiquetas <code>&lt;script&gt;</code> que encontrarás al final. Debajo verás las llamadas de prueba y sus resultados esperados. Guarda los cambios y recarga la página: los resultados aparecerán aquí y en la consola.</p>
+      <p id="resumen" aria-live="polite"></p>
+      <ul id="resultados" class="resultados" aria-live="polite"></ul>
+    </section>
+
+    <footer>Escribe el código en el archivo HTML y vuelve a cargar la página para comprobarlo.</footer>
+  </main>
 
   <!-- CÓDIGO DEL ALUMNADO: escribe dentro de la función y conserva las llamadas de prueba. -->
 
   <script>
-function rps(p1, p2) {
-  // Escribe tu código aquí.
-}
+    function rps(p1, p2) {
+      // Escribe tu código aquí.
+    }
 
-// Llamadas de prueba: comprueba el resultado en la consola del navegador.
-console.log(rps("rock", "scissors")); // Se espera "Player 1 won!"
-console.log(rps("scissors", "paper")); // Se espera "Player 1 won!"
-console.log(rps("paper", "rock")); // Se espera "Player 1 won!"
-console.log(rps("scissors", "rock")); // Se espera "Player 2 won!"
-console.log(rps("rock", "paper")); // Se espera "Player 2 won!"
-console.log(rps("paper", "scissors")); // Se espera "Player 2 won!"
-console.log(rps("rock", "rock")); // Se espera "Draw!"
-console.log(rps("paper", "paper")); // Se espera "Draw!"
-console.log(rps("scissors", "scissors")); // Se espera "Draw!"
+    // Llamadas de prueba: comprueba el resultado en la consola del navegador.
+    console.log(rps("rock", "scissors")); // Se espera "Player 1 won!"
+    console.log(rps("scissors", "paper")); // Se espera "Player 1 won!"
+    console.log(rps("paper", "rock")); // Se espera "Player 1 won!"
+    console.log(rps("scissors", "rock")); // Se espera "Player 2 won!"
+    console.log(rps("rock", "paper")); // Se espera "Player 2 won!"
+    console.log(rps("paper", "scissors")); // Se espera "Player 2 won!"
+    console.log(rps("rock", "rock")); // Se espera "Draw!"
+    console.log(rps("paper", "paper")); // Se espera "Draw!"
+    console.log(rps("scissors", "scissors")); // Se espera "Draw!"
 </script>
 
   <!-- FIN DEL CÓDIGO DEL ALUMNADO -->
 
-</body></html>
+</body>
 
-
-
-
+</html>
